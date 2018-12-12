@@ -62,9 +62,7 @@
 							<label for="title" class="font-weight-bold">Post</label>
 						</div>
 						<div class="col-sm-11">
-							<textarea name="edit_post" class="form-control" rows="6">
-								<?php echo $post; ?>
-							</textarea>
+							<textarea name="edit_post" class="form-control" rows="6"><?php echo $post; ?></textarea>
 						</div>
 					</div>
 				</div>

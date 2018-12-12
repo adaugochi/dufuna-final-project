@@ -1,5 +1,5 @@
 <?php
-	include 'regusers.php';
+	include 'reg-validate.php';
 	
 ?>
 <!DOCTYPE html>
