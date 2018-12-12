@@ -126,27 +126,27 @@
 						$row_count = mysqli_num_rows($run);
 						if ($row_count > 0) {
 							while ($row = mysqli_fetch_array($run)) {
-								$_SESSION['id']	   = $row['id'];
-								$_SESSION['title'] = strtoupper($row['title']);
-								$_SESSION['post']  = $row['post'];
+								$id	   = $row['id'];
+								$title = strtoupper($row['title']);
+								$post  = $row['post'];
 
 								echo '<div class="card">';
 					?>
 							<div class="card-header">
-								<?php echo $_SESSION['title']; ?>
+								<?php echo $title; ?>
 							</div>
 							<div class="card-body">
-								<?php echo $_SESSION['post']; ?>
+								<?php echo $post; ?>
 							</div>
 							<div class="card-footer">
 								<form method="post" action="edit.php">
-									<input type="text" hidden="true" name="edit" value="<?php echo $_SESSION['id']; ?>">
+									<input type="text" hidden="true" name="edit" value="<?php echo $id; ?>">
 								  	<button name="editbtn" class="btn btn-sm btn-warning">
 								  		Edit
 								  	</button>
 								</form>
 								<form method="post" action="delete.php">
-									<input type="text" hidden="true" name="delete" value="<?php echo $_SESSION['id']; ?>'">
+									<input type="text" hidden="true" name="delete" value="<?php echo $id; ?>'">
 									<button class="btn btn-sm btn-danger float-right" name="deletebtn" style="margin-top: -28px;">
 								  		Delete
 									</button>
